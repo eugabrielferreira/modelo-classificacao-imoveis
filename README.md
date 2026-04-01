@@ -24,6 +24,12 @@ Essa pergunta tem aplicação direta em precificação, triagem de leads e anál
 | Recall (caro) | 83% |
 | F1-score (caro) | 0.83 |
 
+## Visualizações
+
+![Matriz de Confusão](grafico1_matriz_confusao.png)
+![Coeficientes](grafico2_coeficientes.png)
+![Erros Geográficos](grafico3_erros_geograficos.png)
+
 ## Principal descoberta
 
 `median_income` é a variável com maior poder preditivo — coeficiente de +2.5, muito acima das demais. Renda do bairro prediz preço imobiliário melhor do que localização geográfica ou tamanho do imóvel.
@@ -36,18 +42,18 @@ O modelo erra mais na região de Los Angeles (latitude ~34, longitude ~-118), on
 
 ## Estrutura do projeto
 ```
-├── data/
-│   ├── housing.csv
-│   ├── 01_exploracao.py
-│   ├── 02_modelo.py
-│   └── 03_visualizacoes.py
+├── 01_exploracao.py
+├── 02_modelo.py
+├── 03_visualizacoes.py
+├── grafico1_matriz_confusao.png
+├── grafico2_coeficientes.png
+├── grafico3_erros_geograficos.png
 └── README.md
 ```
 
 ## Reprodução
 ```bash
 pip install scikit-learn pandas matplotlib
-cd data
 python 01_exploracao.py
 python 02_modelo.py
 python 03_visualizacoes.py
